@@ -10,7 +10,7 @@ def test_uniform_distribution(random_numbers, num_bins):
     expected = len(random_numbers) / num_bins
     chi_square = chi_square_test(observed, expected)
     df = num_bins - 1
-    critical_value = chi2.ppf(0.99, df)  # Significance level of 0.05
+    critical_value = chi2.ppf(0.99, df)  # Significance level of 0.01
     return chi_square, critical_value, observed, expected
 
 # Generate random numbers
